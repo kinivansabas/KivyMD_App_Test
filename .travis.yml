@@ -41,10 +41,11 @@ install:
   - ls -l /home/travis/build/WISEPLAT/mobile_app_001/
   - ls -l
   - yes | cp -f buildozer-64bit.spec buildozer.spec
+  - echo "TODO COMPILE 32bit"
   - yes | buildozer android debug
   - ls -la
   - ls bin/ -l
   - echo "TODO"
   - gem install dpl --pre
-  - dpl releases --token $GITHUB_TOKEN --file "bin/Electrobez_Test-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"
+  - dpl releases --token $GITHUB_TOKEN --file "bin/Electrobez_Test-0.2-armeabi-v7a-debug.apk" --tag_name "v.0.2"
   - echo "OK"
